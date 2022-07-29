@@ -54,9 +54,10 @@ func (c *ShortenControllers) Statistic(rw http.ResponseWriter, r *http.Request) 
 	statURL, err := c.Shorten.Statistic(randomString)
 	if err != nil {
 		helpers.Response(rw, http.StatusOK, map[string]interface{}{
-			"err_msg": nil,
-			"data":    randomString,
+			"err_msg": err.Error(),
+			"data":    nil,
 		})
+		return
 	}
 	helpers.Response(rw, http.StatusOK, map[string]interface{}{
 		"err_msg": nil,
@@ -73,6 +74,7 @@ func (c *ShortenControllers) RedirectURL(rw http.ResponseWriter, r *http.Request
 			"err_msg": nil,
 			"data":    randomString,
 		})
+		return
 	}
 	http.Redirect(rw, r, realURL, http.StatusFound)
 }

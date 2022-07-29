@@ -41,7 +41,7 @@ func (s *ShortenService) ShortenURL(ctx context.Context, data models.ShortenRequ
 	x := &models.ShortenData{
 		URL:           data.URL,
 		ShortenValue:  shortenResult,
-		CreatedAt:     time.Now().String(),
+		CreatedAt:     time.Now().Format("2006-01-02 15:04:05"),
 		RedirectCount: 0,
 	}
 	redirectData = append(redirectData, x)
