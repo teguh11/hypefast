@@ -1,0 +1,16 @@
+mode: set
+github.com/teguh11/hypefast/helpers/shortenURL.go:22.72,24.14 2 1
+github.com/teguh11/hypefast/helpers/shortenURL.go:27.2,29.71 2 1
+github.com/teguh11/hypefast/helpers/shortenURL.go:41.2,41.23 1 1
+github.com/teguh11/hypefast/helpers/shortenURL.go:24.14,26.3 1 1
+github.com/teguh11/hypefast/helpers/shortenURL.go:29.71,30.18 1 1
+github.com/teguh11/hypefast/helpers/shortenURL.go:33.3,33.64 1 1
+github.com/teguh11/hypefast/helpers/shortenURL.go:37.3,38.11 2 1
+github.com/teguh11/hypefast/helpers/shortenURL.go:30.18,32.4 1 0
+github.com/teguh11/hypefast/helpers/shortenURL.go:33.64,36.4 2 1
+github.com/teguh11/hypefast/helpers/shortenURL.go:44.34,46.16 2 1
+github.com/teguh11/hypefast/helpers/shortenURL.go:50.2,51.50 2 1
+github.com/teguh11/hypefast/helpers/shortenURL.go:54.2,54.13 1 1
+github.com/teguh11/hypefast/helpers/shortenURL.go:46.16,48.3 1 1
+github.com/teguh11/hypefast/helpers/shortenURL.go:51.50,53.3 1 0
+github.com/teguh11/hypefast/helpers/response.go:9.73,13.2 3 0

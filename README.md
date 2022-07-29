@@ -6,23 +6,13 @@
 for installation and running process.
 
 1.  `clone this repository`
-
 2.  `run go mod tidy`
-
 3.  `run go main.go http`
-
-  
 
 notes: this api use port 8080 for running. you can change this port in file ```cmd/http.go```
 
-  
-
 while service running, you can use this endpoint for checking
-
-  
-
 1. Generate short URL
-
 Request
 ```
 curl --location --request POST 'localhost:8080/generate' \
@@ -40,7 +30,6 @@ Response
 ```  
 
 2. Redirect URL
-
 Request
 ```
 curl --location --request GET 'http://localhost:8080/Bp4rRG'
