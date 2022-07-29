@@ -37,7 +37,8 @@ to quickly create a Cobra application.`,
 		// Add your routes as needed
 
 		srv := &http.Server{
-			Addr: "0.0.0.0:8080",
+
+			Addr: port(),
 			// Good practice to set timeouts to avoid Slowloris attacks.
 			WriteTimeout: time.Second * 15,
 			ReadTimeout:  time.Second * 15,
@@ -72,6 +73,10 @@ to quickly create a Cobra application.`,
 		log.Println("shutting down")
 		os.Exit(0)
 	},
+}
+
+func port() string {
+	return ":8080"
 }
 
 func init() {
