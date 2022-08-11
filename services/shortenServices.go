@@ -31,12 +31,23 @@ func InitShortenService() *ShortenService {
 }
 
 func (s *ShortenService) ShortenURL(ctx context.Context, data models.ShortenRequest) (result string, err error) {
-	shortenURL, err := helpers.ShortenURL(data.URL, 6)
-	if err != nil {
-		return
+	shortenURL := ""
+	if data.Shorten == "" {
+		shortenURL, err = helpers.ShortenURL(data.URL, 6)
+		if err != nil {
+			return result, err
+		}
+	} else {
+		shortenURL = data.Shorten
 	}
 
 	shortenResult := fmt.Sprintf("%s/%s", hostURL, shortenURL)
+	for _, v := range redirectData {
+		fmt.Println("v +>", v)
+		if v.ShortenValue == shortenResult {
+			return result, errors.New("shorten url has been registered")
+		}
+	}
 
 	x := &models.ShortenData{
 		URL:           data.URL,

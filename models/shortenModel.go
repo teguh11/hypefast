@@ -1,7 +1,8 @@
 package models
 
 type ShortenRequest struct {
-	URL string `json:"url"`
+	URL     string `json:"url"`
+	Shorten string `json:"shorten"`
 }
 
 type ShortenData struct {
